@@ -8,5 +8,7 @@ namespace BitCubeStore.DAL
   public interface IRepository
   {
     void AddProduct(ProductPurchase product);
+    ICollection<ProductPurchase> GetAllProducts();
+    void Updateproduct(ProductPurchase product);
   }
 }

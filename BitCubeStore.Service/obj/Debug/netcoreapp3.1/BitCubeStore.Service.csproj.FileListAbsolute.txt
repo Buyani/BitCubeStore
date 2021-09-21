@@ -1,0 +1,4 @@
+C:\Users\Admin\Source\repos\BitCubeStore.API\BitCubeStore.Service\bin\Debug\netcoreapp3.1\BitCubeStore.DAL.dll
+C:\Users\Admin\Source\repos\BitCubeStore.API\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.csprojAssemblyReference.cache
+C:\Users\Admin\Source\repos\BitCubeStore.API\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.AssemblyInfoInputs.cache
+C:\Users\Admin\Source\repos\BitCubeStore.API\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.AssemblyInfo.cs

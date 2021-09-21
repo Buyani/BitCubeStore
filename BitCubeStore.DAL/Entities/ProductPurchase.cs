@@ -10,6 +10,7 @@ namespace BitCubeStore.DAL.Entities
     [Key]
     public int ProductPurchaseId { get; set; }
     public string ProductName { get; set; }
+    public int Quantity { get; set; }
     public decimal UnitPrice { get; set; }
     public int TypeProductId { get; set; }
     public virtual TypeProduct TypeProduct { get; set; }

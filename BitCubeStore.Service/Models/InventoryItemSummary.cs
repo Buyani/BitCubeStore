@@ -1,4 +1,4 @@
-﻿namespace BitCube.Service.Models
+﻿namespace BitCubeStore.Service.Models
 {
   public class InventoryItemSummary
   {

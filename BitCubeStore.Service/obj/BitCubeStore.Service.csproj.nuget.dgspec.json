@@ -4,14 +4,14 @@
     "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.Service\\BitCubeStore.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.Service\\BitCubeStore.Service.csproj": {
+    "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.Service\\BitCubeStore.Service.csproj",
-        "projectName": "BitCubeStore.Service",
-        "projectPath": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.Service\\BitCubeStore.Service.csproj",
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj",
+        "projectName": "BitCubeStore.DAL",
+        "projectPath": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.Service\\obj\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -44,6 +44,91 @@
       "frameworks": {
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.10, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.Service\\BitCubeStore.Service.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.Service\\BitCubeStore.Service.csproj",
+        "projectName": "BitCubeStore.Service",
+        "projectPath": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.Service\\BitCubeStore.Service.csproj",
+        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.Service\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {
+              "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj": {
+                "projectPath": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[8.1.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

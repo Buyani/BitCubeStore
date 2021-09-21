@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using BitCubeStore.DAL.Entities;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,6 +13,12 @@ namespace BitCubeStore.DAL
     public BitCubeStoreDataContext(DbContextOptions<BitCubeStoreDataContext> options)
       :base(options)
     { }
+
+    /// <summary>
+    /// initialize entities to database
+    /// </summary>
+    public DbSet<ProductPurchase> ProductsPurchaseOrders { get; set; }
+    public DbSet<TypeProduct> ProductTypes { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

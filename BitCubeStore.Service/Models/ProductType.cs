@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace BitCube.Service.Models
+namespace BitCubeStore.Service.Models
 {
   public class ProductType
   {

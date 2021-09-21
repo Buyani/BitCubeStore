@@ -1,6 +1,7 @@
 ﻿using BitCubeStore.DAL.Entities;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace BitCubeStore.DAL
@@ -17,6 +18,16 @@ namespace BitCubeStore.DAL
     {
       context.ProductsPurchaseOrders.Add(product);
       context.SaveChanges();
+    }
+
+    public ICollection<ProductPurchase> GetAllProducts()
+    {
+      return context.ProductsPurchaseOrders.ToList();
+    }
+
+    public void Updateproduct(ProductPurchase product)
+    {
+      context.ProductsPurchaseOrders.Update(product);
     }
   }
 }
