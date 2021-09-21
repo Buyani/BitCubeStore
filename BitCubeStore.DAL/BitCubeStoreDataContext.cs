@@ -19,6 +19,7 @@ namespace BitCubeStore.DAL
     /// </summary>
     public DbSet<ProductPurchase> ProductsPurchaseOrders { get; set; }
     public DbSet<TypeProduct> ProductTypes { get; set; }
+    public DbSet<ProductSold> SolProducts { get; set; }
 
     protected override void OnModelCreating(ModelBuilder builder)
     {

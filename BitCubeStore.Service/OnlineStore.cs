@@ -30,7 +30,30 @@ namespace BitCubeStore.Service
         repository.AddProduct(mapper.Map<ProductPurchase>(purchaseOrder));
       }
     }
-
+    public ProductsSoldResults SellProductsFromInventory(ProductsSellOrder itemsSoldOrder)
+    {
+      var productsoldresults = new ProductsSoldResults();
+      var productsold = getSoldproduct(itemsSoldOrder);
+      if (productsold != null)
+      {
+        if (CheckItemAvailability(itemsSoldOrder))
+        {
+          productsold.Quantity += itemsSoldOrder.Quantity;
+          repository.UpdateSoldProduct(productsold);
+          productsoldresults = SellResults(productsold, itemsSoldOrder.SellPrice, true);
+        }
+        else
+        {
+          productsoldresults = SellResults(productsold, itemsSoldOrder.SellPrice, false);
+        }
+      }
+      else
+      {
+        repository.AddSellProduct(mapper.Map<ProductSold>(itemsSoldOrder));
+        productsoldresults = SellResults(productsold, itemsSoldOrder.SellPrice, true);
+      }
+      return productsoldresults;
+    }
 
     private ProductPurchase ProductExist(ProductsPurchaseOrder productpurchase)
     {
@@ -41,8 +64,42 @@ namespace BitCubeStore.Service
         return product;
 
       return null;
-
-
     }
+
+    private bool CheckItemAvailability(ProductsSellOrder itemsSoldOrder)
+    {
+      var soldproduct = repository.GetAllSoldProducts().FirstOrDefault(product =>
+                        product.ProductPurchaseId.Equals(itemsSoldOrder.ProductPurchaseId)
+                                      && product.ProductPurchase.UnitPrice.Equals(itemsSoldOrder.UnitPrice));
+
+      var purchasedproduct = repository.GetAllProducts().FirstOrDefault(product=>product.ProductPurchaseId.Equals(itemsSoldOrder.ProductPurchaseId));
+
+      if ((purchasedproduct.Quantity - itemsSoldOrder.Quantity) <= soldproduct.Quantity)
+      {
+        return false;
+      }
+
+      return true;
+    }
+    private ProductSold getSoldproduct(ProductsSellOrder itemsSoldOrder)
+    {
+      var product = repository.GetAllSoldProducts().FirstOrDefault(product =>
+                         product.ProductPurchaseId.Equals(itemsSoldOrder.ProductPurchaseId)
+                                       && product.ProductPurchase.UnitPrice.Equals(itemsSoldOrder.UnitPrice));
+
+      return product;
+    }
+    private ProductsSoldResults SellResults(ProductSold productsSell, decimal Sellingprice, bool sold)
+    {
+      return new ProductsSoldResults
+      {
+        SellingPrice = Sellingprice,
+        ProductName = productsSell.ProductPurchase.ProductName,
+        ProductSold = sold,
+        Quantity = productsSell.Quantity
+      };
+    }
+
+
   }
 }

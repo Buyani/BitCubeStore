@@ -29,5 +29,19 @@ namespace BitCubeStore.DAL
     {
       context.ProductsPurchaseOrders.Update(product);
     }
+
+    public void AddSellProduct(ProductSold productsSellOrder)
+    {
+      context.SolProducts.Add(productsSellOrder);
+      context.SaveChanges();
+    }
+    public void UpdateSoldProduct(ProductSold product)
+    {
+      context.SolProducts.Update(product);
+    }
+    public ICollection<ProductSold> GetAllSoldProducts()
+    {
+      return context.SolProducts.ToList();
+    }
   }
 }

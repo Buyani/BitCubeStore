@@ -8,5 +8,6 @@ namespace BitCubeStore.Service
   public interface IOnlineStore
   {
     void AddProductsToInventory(ProductsPurchaseOrder purchaseOrder);
+    ProductsSoldResults SellProductsFromInventory(ProductsSellOrder itemsSoldOrder);
   }
 }
