@@ -1,8 +1,10 @@
+using BitCubeStore.DAL;
 using BitCubeStore.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -28,6 +30,12 @@ namespace BitCubeStore.API
     public void ConfigureServices(IServiceCollection services)
     {
       services.AddAutoMapper(typeof(AutoMapp));
+      services.AddTransient<IRepository, Repository>();
+      services.AddTransient<IOnlineStore, OnlineStore>();
+
+      services.AddDbContext<BitCubeStoreDataContext>(options => options.UseSqlServer(
+        Configuration.GetConnectionString("StoreConnection")));
+
       services.AddControllers();
       services.AddSwaggerGen(c =>
       {

@@ -58,7 +58,7 @@ namespace BitCubeStore.Service
     private ProductPurchase ProductExist(ProductsPurchaseOrder productpurchase)
     {
       var product = repository.GetAllProducts().FirstOrDefault(product => product.ProductName.Equals(productpurchase.ProductName)
-         && product.UnitPrice.Equals(productpurchase.UnitPrice) && product.TypeProductId.Equals(productpurchase.ProductTypeId));
+         && product.UnitPrice.Equals(productpurchase.UnitPrice) && product.ProductTypeId.Equals(productpurchase.ProductTypeId));
 
       if (product != null)
         return product;
@@ -100,6 +100,35 @@ namespace BitCubeStore.Service
       };
     }
 
+    public InventorySummary InventorySummary()
+    {
+      var productlist = new List<ProductsPurchaseOrder>();
 
+      foreach(var product in repository.GetAllProducts().Select(mapper.Map<ProductPurchase, ProductsPurchaseOrder>).ToList())
+      {
+        productlist.Add(product);
+      }
+      return new InventorySummary
+      {
+        InventoryProducts = productlist
+      };
+
+    }
+
+    public InventoryItemSummary GetInventoryItemSummary(ProductType stockType)
+    {
+      var productlist = new List<ProductsPurchaseOrder>();
+
+      foreach (var product in repository.GetAllProducts().Where(product=>product.ProductTypeId.Equals(stockType.ProductTypeId)).Select(mapper.Map<ProductPurchase, ProductsPurchaseOrder>).ToList())
+      {
+        productlist.Add(product);
+      }
+      return new InventoryItemSummary
+      {
+        InventoryProducts = productlist
+      };
+
+
+    }
   }
 }

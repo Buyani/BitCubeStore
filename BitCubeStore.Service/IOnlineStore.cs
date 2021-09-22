@@ -9,5 +9,7 @@ namespace BitCubeStore.Service
   {
     void AddProductsToInventory(ProductsPurchaseOrder purchaseOrder);
     ProductsSoldResults SellProductsFromInventory(ProductsSellOrder itemsSoldOrder);
+    InventoryItemSummary GetInventoryItemSummary(ProductType stockType);
+    InventorySummary InventorySummary();
   }
 }
