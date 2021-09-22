@@ -12,8 +12,10 @@ namespace BitCubeStore.DAL
     void Updateproduct(ProductPurchase product);
 
 
-    void AddSellProduct(ProductSold productsSellOrder);
+    ProductSold AddSellProduct(ProductSold productsSellOrder);
     void UpdateSoldProduct(ProductSold product);
     ICollection<ProductSold> GetAllSoldProducts();
+
+    ICollection<TypeProduct> GetAllTypes();
   }
 }

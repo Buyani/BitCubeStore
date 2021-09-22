@@ -6,38 +6,30 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace BitCubeStore.API.Controllers
 {
   [Route("api/[controller]")]
   [ApiController]
-  public class StoreController : ControllerBase
+  public class SellProductController : ControllerBase
   {
     private readonly IOnlineStore service;
-    public StoreController(IOnlineStore service)
+    public SellProductController(IOnlineStore service)
     {
       this.service = service;
     }
-
-    // GET: api/<StoreController>
+    // GET: api/<SellProductController>
     [HttpGet]
-    public InventorySummary Get()
+    public IEnumerable<string> Get()
     {
-      return service.InventorySummary();
+      return new string[] { "value1", "value2" };
     }
-    [HttpGet("{ProductTypeId}")]
-    public InventoryItemSummary Get(ProductType stockType)
-    {
-      return service.GetInventoryItemSummary(stockType);
-    }
-
-    // POST api/<StoreController>
+    // POST api/<SellProductController>
     [HttpPost]
-    public void Post([FromBody] ProductsPurchaseOrder product)
+    public void Post([FromBody] ProductsSellOrder sellorder)
     {
-      service.AddProductsToInventory(product);
+      service.SellProductsFromInventory(sellorder);
     }
   }
 }

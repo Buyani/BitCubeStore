@@ -30,10 +30,12 @@ namespace BitCubeStore.DAL
       context.ProductsPurchaseOrders.Update(product);
     }
 
-    public void AddSellProduct(ProductSold productsSellOrder)
+    public ProductSold AddSellProduct(ProductSold productsSellOrder)
     {
       context.SolProducts.Add(productsSellOrder);
       context.SaveChanges();
+
+      return productsSellOrder;
     }
     public void UpdateSoldProduct(ProductSold product)
     {
@@ -42,6 +44,16 @@ namespace BitCubeStore.DAL
     public ICollection<ProductPurchase> GetAllSoldProducts()
     {
       return context.ProductsPurchaseOrders.ToList();
+    }
+
+    ICollection<ProductSold> IRepository.GetAllSoldProducts()
+    {
+      return context.SolProducts.ToList();
+    }
+
+    public ICollection<TypeProduct> GetAllTypes()
+    {
+      return context.ProductTypes.ToList();
     }
   }
 }

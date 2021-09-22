@@ -49,7 +49,7 @@ namespace BitCubeStore.Service
       }
       else
       {
-        repository.AddSellProduct(mapper.Map<ProductSold>(itemsSoldOrder));
+        productsold=repository.AddSellProduct(mapper.Map<ProductSold>(itemsSoldOrder));
         productsoldresults = SellResults(productsold, itemsSoldOrder.SellPrice, true);
       }
       return productsoldresults;
@@ -117,17 +117,16 @@ namespace BitCubeStore.Service
 
     public InventoryItemSummary GetInventoryItemSummary(ProductType stockType)
     {
-      var productlist = new List<ProductsPurchaseOrder>();
+      var inventory = new InventoryItemSummary();
 
-      foreach (var product in repository.GetAllProducts().Where(product=>product.ProductTypeId.Equals(stockType.ProductTypeId)).Select(mapper.Map<ProductPurchase, ProductsPurchaseOrder>).ToList())
+      foreach (var product in repository.GetAllProducts().Where(product => product.ProductTypeId.Equals(stockType.ProductTypeId)).Select(mapper.Map<ProductPurchase, ProductsPurchaseOrder>).ToList())
       {
-        productlist.Add(product);
+        inventory.InventoryProducts.Add(product);
       }
-      return new InventoryItemSummary
-      {
-        InventoryProducts = productlist
-      };
 
+      inventory.AveragePrice = inventory.InventoryProducts.Select(price => price.UnitPrice).Sum() / inventory.InventoryProducts.Count();
+
+      return inventory;
 
     }
   }
