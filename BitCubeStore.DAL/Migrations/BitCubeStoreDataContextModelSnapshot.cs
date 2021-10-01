@@ -26,6 +26,12 @@ namespace BitCubeStore.DAL.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<string>("Make")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Model_Number")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ProductName")
                         .HasColumnType("nvarchar(max)");
 
@@ -69,7 +75,8 @@ namespace BitCubeStore.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ProductPurchaseId");
+                    b.HasIndex("ProductPurchaseId")
+                        .IsUnique();
 
                     b.ToTable("SolProducts");
                 });
@@ -101,12 +108,17 @@ namespace BitCubeStore.DAL.Migrations
             modelBuilder.Entity("BitCubeStore.DAL.Entities.ProductSold", b =>
                 {
                     b.HasOne("BitCubeStore.DAL.Entities.ProductPurchase", "ProductPurchase")
-                        .WithMany()
-                        .HasForeignKey("ProductPurchaseId")
+                        .WithOne("ProductSold")
+                        .HasForeignKey("BitCubeStore.DAL.Entities.ProductSold", "ProductPurchaseId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("ProductPurchase");
+                });
+
+            modelBuilder.Entity("BitCubeStore.DAL.Entities.ProductPurchase", b =>
+                {
+                    b.Navigation("ProductSold");
                 });
 
             modelBuilder.Entity("BitCubeStore.DAL.Entities.TypeProduct", b =>

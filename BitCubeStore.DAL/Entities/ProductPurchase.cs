@@ -14,5 +14,6 @@ namespace BitCubeStore.DAL.Entities
     public decimal UnitPrice { get; set; }
     public int ProductTypeId { get; set; }
     public virtual TypeProduct TypeProduct { get; set; }
+    public virtual ProductSold ProductSold { get; set; }
   }
 }

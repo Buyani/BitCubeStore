@@ -18,6 +18,8 @@ namespace BitCubeStore.Service
       CreateMap<ProductSold, ProductsSellOrder>();
       CreateMap<ProductsSellOrder, ProductSold>();
 
+      CreateMap<ProductPurchase, InventorySummary>();
+
     }
   }
 }

@@ -28,6 +28,7 @@ namespace BitCubeStore.DAL
     public void Updateproduct(ProductPurchase product)
     {
       context.ProductsPurchaseOrders.Update(product);
+      context.SaveChanges();
     }
 
     public ProductSold AddSellProduct(ProductSold productsSellOrder)
@@ -40,6 +41,7 @@ namespace BitCubeStore.DAL
     public void UpdateSoldProduct(ProductSold product)
     {
       context.SolProducts.Update(product);
+      context.SaveChanges();
     }
     public ICollection<ProductPurchase> GetAllSoldProducts()
     {

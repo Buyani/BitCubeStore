@@ -21,15 +21,15 @@ namespace BitCubeStore.API.Controllers
     }
     // GET: api/<SellProductController>
     [HttpGet]
-    public IEnumerable<string> Get()
+    public InventorySummary Get()
     {
-      return new string[] { "value1", "value2" };
+      return service.GetInventorySummary();
     }
     // POST api/<SellProductController>
     [HttpPost]
-    public void Post([FromBody] ProductsSellOrder sellorder)
+    public ProductsSoldResults Post([FromBody] ProductsSellOrder sellorder)
     {
-      service.SellProductsFromInventory(sellorder);
+      return service.SellProductsFromInventory(sellorder);
     }
   }
 }

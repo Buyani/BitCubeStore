@@ -25,13 +25,10 @@ namespace BitCubeStore.API.Controllers
     [HttpGet]
     public InventorySummary Get()
     {
-      return service.InventorySummary();
+      return service.GetInventorySummary();
     }
     [HttpGet("{ProductTypeId}")]
-    public InventoryItemSummary Get(ProductType stockType)
-    {
-      return service.GetInventoryItemSummary(stockType);
-    }
+
 
     // POST api/<StoreController>
     [HttpPost]

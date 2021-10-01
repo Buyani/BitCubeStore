@@ -1,4 +1,6 @@
-﻿namespace BitCubeStore.Service.Models
+﻿using System;
+
+namespace BitCubeStore.Service.Models
 {
     public class ProductsSellOrder
     {
@@ -6,5 +8,6 @@
     public int ProductPurchaseId { get; set; }
     public decimal UnitPrice { get; set; }
     public decimal SellPrice { get; set; }
+
   }
 }
