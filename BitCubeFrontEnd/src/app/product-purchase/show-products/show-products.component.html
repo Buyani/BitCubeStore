@@ -1,0 +1,21 @@
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>type</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let productitem of ProductsList">
+            <td>{{productitem.ProductPurchaseId}}</td>
+            <td>{{productitem.ProductName}}</td>
+            <td>{{productitem.Quantity}}</td>
+            <td>{{productitem.UnitPrice}}</td>
+            <td>
+                <button type="button" class="btn btn-primary btn-lg">Sell Product</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

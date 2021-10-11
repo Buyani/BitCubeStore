@@ -1,24 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj": {}
+    "C:\\Users\\Buyani\\source\\repos\\BitCubeStore\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj": {
+    "C:\\Users\\Buyani\\source\\repos\\BitCubeStore\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj",
+        "projectUniqueName": "C:\\Users\\Buyani\\source\\repos\\BitCubeStore\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj",
         "projectName": "BitCubeStore.DAL",
-        "projectPath": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Admin\\Source\\repos\\BitCubeStore.API\\BitCubeStore.DAL\\obj\\",
+        "projectPath": "C:\\Users\\Buyani\\source\\repos\\BitCubeStore\\BitCubeStore.DAL\\BitCubeStore.DAL.csproj",
+        "packagesPath": "C:\\Users\\Buyani\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Buyani\\source\\repos\\BitCubeStore\\BitCubeStore.DAL\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
         ],
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Buyani\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
@@ -75,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.104\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
         }
       }
     }

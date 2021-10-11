@@ -10,3 +10,16 @@ C:\Users\Admin\Source\repos\BitCubeStore.API\BitCubeStore.Service\obj\Debug\netc
 C:\Users\Admin\Source\repos\BitCubeStore.API\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.csproj.CopyComplete
 C:\Users\Admin\Source\repos\BitCubeStore.API\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.dll
 C:\Users\Admin\Source\repos\BitCubeStore.API\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.pdb
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\bin\Debug\netcoreapp3.1\BitCubeStore.Service.deps.json
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\bin\Debug\netcoreapp3.1\BitCubeStore.Service.dll
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\bin\Debug\netcoreapp3.1\BitCubeStore.Service.pdb
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\bin\Debug\netcoreapp3.1\BitCubeStore.DAL.dll
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\bin\Debug\netcoreapp3.1\BitCubeStore.DAL.pdb
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.csproj.AssemblyReference.cache
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.AssemblyInfoInputs.cache
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.AssemblyInfo.cs
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.csproj.CoreCompileInputs.cache
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.csproj.CopyComplete
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.dll
+C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.Service\obj\Debug\netcoreapp3.1\BitCubeStore.Service.pdb
