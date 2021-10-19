@@ -3,14 +3,74 @@
 
     <mat-card class="mat-elevation-z8">
       <mat-card-content>
-
+        <mat-toolbar color="accent" style="  background: #007bff;
+        color: #fff;">
+            <div align="center" style="text-align: right;">
+            Product Invetory System
+            </div>
+          </mat-toolbar>
       </mat-card-content>
     </mat-card>
-</div>
+
 <div>
     <br>
 </div>
+    
 
+<div class="row">
+    <div class="col-md-6">
+
+
+
+
+        <mat-card class="mat-elevation-z8">
+            <mat-toolbar color="accent" style="  background: #a4c5e9;
+            color: #fff;">
+                <div align="center" style="text-align: right;">
+                 Product Form
+                </div>
+              </mat-toolbar>
+              <br><br>
+            <mat-card-content>
+                <form [formGroup]="productForm" class="form-horizontal" (ngSubmit)="onFormSubmit()">
+                    <table>
+                        <tr>
+                            <td>
+                                <mat-form-field class="demo-full-width">
+                                    <input formControlName="ProductName" matTooltip="Enter Product Name" matInput placeholder="Product Name" autocomplete="off">
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field class="demo-full-width">
+                                    <input formControlName="UnitPrice" matTooltip="Enter Unit Price" matInput placeholder="Unit Price" autocomplete="off">
+                                </mat-form-field>
+                            </td>
+        
+                        </tr>
+                        <tr>
+                            <td>
+                                <mat-form-field class="demo-full-width">
+                                    <input formControlName="Quantity" matTooltip="Enter Quantity" matInput placeholder="Quantity" autocomplete="off">
+                                </mat-form-field>
+                            </td>
+                            <td>
+
+                                <mat-form-field class="demo-full-width">
+                                    <input formControlName="ProductTypeId" matTooltip="Enter ProductTypeId" matInput placeholder="ProductTypeId" autocomplete="off">
+                                </mat-form-field>
+                            </td>
+                        </tr>
+        
+                    </table>
+                    <td class="content-center">
+                        <button type="submit" mat-raised-button color="accent" matTooltip="Submit" [disabled]="!productForm.valid">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+                        <button type="reset" mat-raised-button color="accent" matTooltip="Reset" (click)="resetForm()">Reset</button>
+                      </td>
+                </form>
+            </mat-card-content>
+          </mat-card>
+    </div>
+    <div class="col-md-6">
 <mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort class="mat-elevation-z8" style="box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);">
 
     <ng-container matColumnDef="ProductId">
@@ -44,5 +104,20 @@
     </ng-container>            
     <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
     <mat-row *matRowDef="let row; columns: columnsToDisplay"></mat-row>
+
+
 </mat-table>
+<mat-paginator [length]="100"
+[pageSize]="10"
+[pageSizeOptions]="[5, 10, 25, 100]"
+aria-label="Select page">
+</mat-paginator>
+    </div>
+</div>
+
+</div>
+
+
+
+
 

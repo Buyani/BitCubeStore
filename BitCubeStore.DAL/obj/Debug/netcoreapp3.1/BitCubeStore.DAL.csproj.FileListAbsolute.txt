@@ -23,3 +23,15 @@ C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.DAL\obj\Debug\netcoreapp3
 C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.DAL\obj\Debug\netcoreapp3.1\BitCubeStore.DAL.dll
 C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.DAL\obj\Debug\netcoreapp3.1\BitCubeStore.DAL.pdb
 C:\Users\Buyani\source\repos\BitCubeStore\BitCubeStore.DAL\obj\Debug\netcoreapp3.1\BitCubeStore.DAL.genruntimeconfig.cache
+C:\Users\Admin\Source\repos\BitCubeStore\BitCubeStore.DAL\bin\Debug\netcoreapp3.1\BitCubeStore.DAL.deps.json
+C:\Users\Admin\Source\repos\BitCubeStore\BitCubeStore.DAL\bin\Debug\netcoreapp3.1\BitCubeStore.DAL.runtimeconfig.json
+C:\Users\Admin\Source\repos\BitCubeStore\BitCubeStore.DAL\bin\Debug\netcoreapp3.1\BitCubeStore.DAL.runtimeconfig.dev.json
+C:\Users\Admin\Source\repos\BitCubeStore\BitCubeStore.DAL\bin\Debug\netcoreapp3.1\BitCubeStore.DAL.dll
+C:\Users\Admin\Source\repos\BitCubeStore\BitCubeStore.DAL\bin\Debug\netcoreapp3.1\BitCubeStore.DAL.pdb
+C:\Users\Admin\Source\repos\BitCubeStore\BitCubeStore.DAL\obj\Debug\netcoreapp3.1\BitCubeStore.DAL.csprojAssemblyReference.cache
+C:\Users\Admin\Source\repos\BitCubeStore\BitCubeStore.DAL\obj\Debug\netcoreapp3.1\BitCubeStore.DAL.AssemblyInfoInputs.cache
+C:\Users\Admin\Source\repos\BitCubeStore\BitCubeStore.DAL\obj\Debug\netcoreapp3.1\BitCubeStore.DAL.AssemblyInfo.cs
+C:\Users\Admin\Source\repos\BitCubeStore\BitCubeStore.DAL\obj\Debug\netcoreapp3.1\BitCubeStore.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Source\repos\BitCubeStore\BitCubeStore.DAL\obj\Debug\netcoreapp3.1\BitCubeStore.DAL.dll
+C:\Users\Admin\Source\repos\BitCubeStore\BitCubeStore.DAL\obj\Debug\netcoreapp3.1\BitCubeStore.DAL.pdb
+C:\Users\Admin\Source\repos\BitCubeStore\BitCubeStore.DAL\obj\Debug\netcoreapp3.1\BitCubeStore.DAL.genruntimeconfig.cache

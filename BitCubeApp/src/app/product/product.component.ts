@@ -7,6 +7,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { MatTableDataSource, } from '@angular/material/table';
 import { MatSnackBar, MatSnackBarHorizontalPosition, MatSnackBarVerticalPosition } from '@angular/material/snack-bar';
 import { ProductService } from '../product.service';
+import { ProductType } from '../product-type';
+import { SelectionModel } from '@angular/cdk/collections';
 
 @Component({
   selector: 'app-product',
@@ -17,10 +19,11 @@ export class ProductComponent implements OnInit {
   dataSaved = false;
   showModal: boolean;
   submitted = false;
+  allProductTypes: Observable<ProductType>;
+ 
   productForm:any;
   allEmployees: Observable<Product[]>;
   dataSource: MatTableDataSource<Product>;
-  productUpdate = null;
   columnsToDisplay : string[] = ['ProductId','ProductTypeId','ProductName', 'Quantity', 'UnitPrice'];
 
   horizontalPosition: MatSnackBarHorizontalPosition = 'center';
@@ -39,9 +42,8 @@ export class ProductComponent implements OnInit {
     { ProductName:'Tomatoe',Quantity:'78',UnitPrice:'120',ProductId:6,ProductTypeId:'3'},
     { ProductName:'Grape',Quantity:'441',UnitPrice:'300',ProductId:7,ProductTypeId:'2'},
     { ProductName:'Lemon',Quantity:'452',UnitPrice:'800',ProductId:8,ProductTypeId:'2'},
-    
     ];
-
+    
 constructor(private formbulider: FormBuilder,private productService: ProductService, private _snackBar: MatSnackBar) { 
 
 }
@@ -58,7 +60,7 @@ hide()
 
 ngOnInit():void {
   this.productForm = this.formbulider.group({
-    FirstName: ['', [Validators.required]],
+    ProductName: ['', [Validators.required]],
     Quantity: ['', [Validators.required]],
     UnitPrice: ['', [Validators.required]],
     ProductTypeId: ['', [Validators.required]]
@@ -74,20 +76,32 @@ this.dataSource= new MatTableDataSource<Product>(this.productslist);
 this.dataSource.paginator = this.paginator;
 this.dataSource.sort = this.sort;
 }
+
+FillProductTypeDDL() {
+  this.allProductTypes =this.productService.getAllProductTypes();
+}
+
+
 resetForm() {
+  this.productForm.reset();
+  this.dataSaved=false;
   this.loadProducts();
 }
-onFormSubmit(){
-  this.submitted = true;
-  // stop here if form is invalid
-  if (this.productForm.invalid) {
-      return;
-  }
-  if(this.submitted)
-  {
-    this.showModal = false;
-  }
 
+onFormSubmit() {
+  this.dataSaved = true;
+  const product = this.productForm.value;
+  //call save method here
+  console.log(product);
+  this.SavedSuccessful(1);
+  this.productForm.reset();
+}
+CreateProduct(product: Product) {
+  this.productService.createProduct(product);
+  this.dataSaved=true;
+  this.loadProducts();
+  this.SavedSuccessful(1);
+  this.productForm.reset();
 }
 
 SavedSuccessful(isUpdate:any) {
