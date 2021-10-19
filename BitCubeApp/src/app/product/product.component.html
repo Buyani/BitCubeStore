@@ -1,0 +1,48 @@
+
+<div class="container">
+
+    <mat-card class="mat-elevation-z8">
+      <mat-card-content>
+
+      </mat-card-content>
+    </mat-card>
+</div>
+<div>
+    <br>
+</div>
+
+<mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource" matSort class="mat-elevation-z8" style="box-shadow: 0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);">
+
+    <ng-container matColumnDef="ProductId">
+        <mat-header-cell *matHeaderCellDef>ProductId</mat-header-cell>
+        <mat-cell class="duration-cell"
+                    *matCellDef="let product">{{product.ProductId}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ProductName">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>ProductName</mat-header-cell>
+        <mat-cell *matCellDef="let product">{{product.ProductName}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Quantity">
+        <mat-header-cell *matHeaderCellDef>Quantity</mat-header-cell>
+        <mat-cell class="description-cell"
+                    *matCellDef="let product">{{product.Quantity}}</mat-cell>
+
+    </ng-container>
+
+    <ng-container matColumnDef="UnitPrice">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>UnitPrice</mat-header-cell>
+        <mat-cell class="duration-cell"
+                    *matCellDef="let product">{{product.UnitPrice}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ProductTypeId">
+        <mat-header-cell *matHeaderCellDef>ProductTypeId</mat-header-cell>
+        <mat-cell class="duration-cell"
+                    *matCellDef="let product">{{product.ProductTypeId}}</mat-cell>
+    </ng-container>            
+    <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnsToDisplay"></mat-row>
+</mat-table>
+

@@ -1,0 +1,16 @@
+<mat-nav-list>
+    <div class="logo py-4">
+      </div>
+    <mat-divider></mat-divider>
+    <h1 matSubheader class="mt-2">INVENTORY SYSTEM</h1>
+    <a mat-list-item routerLinkActive="list-item-active" routerLink="/dashboard" (click)="dahCliked()">
+      <mat-icon>home</mat-icon> Home
+    </a>
+    <a mat-list-item routerLink="/products" (click)="productCliked()"> 
+      <mat-icon>edit</mat-icon> Product 
+    </a>
+
+    <a mat-list-item routerLink="/producttypes" (click)="producttypeCliked()"> 
+      <mat-icon>edit</mat-icon> Products Types
+    </a>
+  </mat-nav-list>
