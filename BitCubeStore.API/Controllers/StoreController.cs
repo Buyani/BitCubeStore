@@ -32,6 +32,7 @@ namespace BitCubeStore.API.Controllers
 
     // POST api/<StoreController>
     [HttpPost]
+    [Route("PostProduct")]
     public void Post([FromBody] ProductsPurchaseOrder product)
     {
       service.AddProductsToInventory(product);

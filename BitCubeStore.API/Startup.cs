@@ -52,6 +52,12 @@ namespace BitCubeStore.API
         app.UseSwagger();
         app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "BitCubeStore.API v1"));
       }
+      app.UseCors(builder => builder
+  .AllowAnyHeader()
+  .AllowAnyMethod()
+  .SetIsOriginAllowed((host) => true)
+  .AllowCredentials()
+  );
 
       app.UseHttpsRedirection();
 

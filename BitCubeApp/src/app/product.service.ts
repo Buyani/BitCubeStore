@@ -9,7 +9,7 @@ import { ProductType } from './product-type';
   providedIn: 'root'
 })
 export class ProductService {
-  url="loaclhost"
+  url="https://localhost:44324/api/"
   constructor(public http:HttpClient) { }
 
 
@@ -20,7 +20,7 @@ export class ProductService {
 
   createProduct(product:Product):Observable<Product>{
     const httpOptions={headers:new HttpHeaders({'Content-Type':'application/json'})};
-    return this.http.post<Product>(this.url+'/InsertProduct/',product,httpOptions);
+    return this.http.post<Product>(this.url+'/PostProduct/',product,httpOptions);
   }
 
   updateProduct(product:Product):Observable<Product>{
